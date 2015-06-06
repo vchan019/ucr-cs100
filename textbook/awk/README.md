@@ -128,7 +128,7 @@ AWK can also handle boolean logic.
 
 Operator | Definition
 -------- | --------------------------------------------
-||       | OR
+\|\|     | OR
 &&       | AND
 !        | NOT
 ==       | equal
