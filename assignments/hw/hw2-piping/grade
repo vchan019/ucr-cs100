@@ -1,1 +1,51 @@
-/ 100
+25/ 100
+Last update Sun May 17 21:19:27 2015 -0700
+
+-----------------------------------------------------
+[1]  Input redirection from an existant file (25)
+$: this is correct
+this is not
+
+-----------------------------------------------------
+[2]  Output redirection (>) to an non-existant file (15)
+  -15: Does not work!
+$: 
+-----------------------------------------------------
+[3]  Output append (>>) to an existing file (10)
+  -10: Does not work!
+$: 
+-----------------------------------------------------
+[4]  Command with one pipe (15)
+  -15: Does not work!
+$: this is correct
+this is not
+$: 
+-----------------------------------------------------
+[5]  Command with more than one pipe (15)
+  -15: Does not work!
+$: this is correct
+this is not
+$: 
+-----------------------------------------------------
+[6]  Input redirection with piping (5)
+  -5: Does not work!
+$: this is correct
+this is not
+
+-----------------------------------------------------
+[7]  Output redirection and piping (5)
+  -5: Does not work!
+$: -5: $.*|.\+> test missing
+
+-----------------------------------------------------
+[8]  Input redirection, output redirection, and piping (10)
+  -10: Does not work!
+$: -10: $.*<.\+|.\+> test missing
+
+-----------------------------------------------------
+  Extra 1: <<< (20)
+$: -20: $.*<<< test missing
+  -20: Does not work!
+
+-----------------------------------------------------
+  Extra 2 (20)
