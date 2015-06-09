@@ -1,28 +1,22 @@
 #AWK Tutorial#
-============
+
 
 #What is AWK?#
 -----------
-AWK is text-based programming language and a very powerful and simple text-processing utlity on GNU/Linux.
-It focuses on the interpretation of streams, which makes it ideal for such tasks as filestream manipulation or piping.
-In particular, AWK can be used to sort through large tables of data, produce formatted reports, and a variety of other things.
+AWK is a programming language that is a very powerful and simple text-processing utlity on Unix.
+It focuses on parsing input from a file stream into an output form specified by the user.
+For example, AWK can be used to sort through large tables of data, produce formatted reports, and overall is very valuable for data parsing.
 
 #Using AWK#
 -------------
 
-In this tutorial we will be using an text file "class.txt", which contains teh records of a hypothetical elementary school class.
-Try it yourself! Clone this repo and launch `make`.
+In this tutorial we will be using an text file `class.txt`, which contains the records of a hypothetical elementary school class.
 
-##Basic AWK Commands##
-Simple single line commands can be made in the following format:
+You can write simple single line commands in the following format:
 ```
 awk '/pattern/ {action}' [filepath]
 ```
 
-Similar to C, you can also use `;` to denote the end of an action.  This is useful for multiple actions.
-```
-awk '/pattern/ {action; action}' [filepath]
-```
 Let's try printing our class.txt file:
 ```
 awk '{print}' class.txt
@@ -58,7 +52,7 @@ prints `hello world` for every line with a match.
 
 Let's take things a bit further.
 What if we wanted only to view classes, and omit student information?
-Utilizing the pattern field, AWK can function similarly to grep:
+Using the pattern field, AWK can function like grep:
 ```
 awk '/Class/' class.txt
 ```
@@ -234,6 +228,13 @@ If you type your AWK commands in a text file, you can run it by typing:
 ```
 awk -f (file name here) '/pattern/ {action} ' [filepath]
 ```
+
+Similar to C, you can also use `;` to denote the end of an action.  
+This is useful for multiple actions.
+```
+awk '/pattern/ {action; action}' [filepath]
+```
+
 ##Conclusion##
 I hope that after reading through our tutorial you have a good enough understanding of AWK to be able to use it for your purposes.
 It is truly a powerful tool that is easy to learn but will be able to save you a lot of parsing time.
